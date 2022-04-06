@@ -1,0 +1,40 @@
+#include<iostream.h>
+#include<conio.h>
+class armstrong
+{
+	public:
+	int a,r,n,c,sum;
+	void get()
+	{
+	       cout<<"enter the number:";
+	       cin>>n;
+	       a=n;
+	    }
+	    void cal()
+	    {
+		int sum=0;
+		while(n>0)
+	     {
+	      r=n%10;
+	      c=r*r*r;
+	      sum=sum+c;
+	      n=n/10;
+	       }
+	       if (sum==a)
+	       {
+		cout<<"the number is armstrong:"<<a;
+	       }
+	       else
+	       {
+		       cout<<"the number is not armstrong:"<<a;
+	       }
+	    }
+};
+void main()
+{
+	clrscr();
+	armstrong f1;
+	f1.get();
+	f1.cal();
+	getch();
+}
